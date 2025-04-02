@@ -1,0 +1,204 @@
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+li[role="list"]{ list-style:none; padding: 0; margin: 0; }
+#root, #__next { isolation: isolate; }
+
+:root{
+/* colors */
+--blue-900: hsl(230,35%,7%);
+--blue-300: hsl(231,77%,90%);
+--white: hsl(0,0%,100%);
+--accent: hsl(227,6%,30%);
+
+/* typography */
+--fs-preset-1-desktop: 9rem;
+--fs-preset-2-desktop: 6.25rem;
+--fs-preset-3-desktop: 3.5rem;
+--fs-preset-4-desktop: 2rem;
+--fs-preset-5-desktop: 1.75rem;
+--fs-preset-7-desktop: .875rem;
+--fs-preset-8-desktop: 1rem;
+--fs-preset-9-desktop: 1.125rem;
+
+--fs-preset-2-tablet: 5rem;
+--fs-preset-3-tablet: 2.5rem;
+--fs-preset-4-tablet: 1.5rem;
+--fs-preset-5-tablet: 1.25rem;
+--fs-preset-9-tablet: 1rem;
+
+--fs-preset-1-mobile: 5rem;
+--fs-preset-2-mobile: 3.5rem;
+--fs-preset-3-mobile: 1.5rem;
+--fs-preset-4-mobile: 1.125rem;
+--fs-preset-6-mobile: 1rem;
+--fs-preset-8-mobile: .875rem;
+--fs-preset-9-mobile: .9375rem;
+
+/* spacing */
+--spc-1600: 8rem;
+--spc-1200: 6rem;
+--spc-1000: 5rem;
+--spc-800: 4rem;
+--spc-600: 3rem;
+--spc-500: 2.5rem;
+--spc-400: 2rem;
+--spc-300: 1.5rem;
+--spc-200: 1rem;
+--spc-150: .75rem;
+--spc-100: .5rem;
+--spc-50: .25rem;
+--spc-25: .125rem;
+
+}
+
+/* utility classes */
+.emphasize{
+font-family: 'Bellefair';
+font-size: var(--fs-preset-2);
+letter-spacing: 0px;
+}
+
+.subtitle{
+font-size: 1rem;
+font-weight: 400;
+letter-spacing: .125rem;
+font-family: 'Bellefair';
+}
+
+.accent-color{
+	color: var(--accent);
+}
+
+.h{
+display: none;
+}
+
+body{
+background-image: url('./assets/destination/background-destination-mobile.jpg');
+min-height: 100%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+font-family: 'Barlow Condensed', 'sans-serif';
+color: var(--white);
+text-transform: uppercase;
+font-size: var(--fs-preset-5-mobile);
+line-height: 1.8;
+height: 100%;
+
+padding: var(--spc-300);
+}
+
+h1{
+	display:flex;
+	gap: 24px;
+	justify-content:center;
+	font-weight: 400;
+	font-size: var(--fs-preset-4-mobile);
+	letter-spacing: 2px;
+}
+
+.nav-card-wrapper{
+display: grid;
+grid-template-rows: 1fr 1fr;
+}
+
+.nav-wrapper{
+ display: flex;
+ justify-content:space-between;
+ margin-bottom: 48px;
+}
+
+.planet-wrapper{
+	margin-inline: auto;
+	margin-block: var(--spc-600);
+	width: 150px;
+	height: 150px;
+}
+.checkboxes-wrapper{
+	display: flex;
+	justify-content:center;
+	gap: var(--spc-500);
+	padding-top: var(--spc-200);
+	letter-spacing: 2px;
+
+	label{
+		position:relative;
+	}
+	label input[type="checkbox"]{
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+
+	label:has(input[type="checkbox"]:checked)::after{
+		display: block;
+		content: "";
+		width: 100%;
+		height: 4px;
+		background-color: white;
+		transform: translateY(5px);
+
+	}
+
+}
+
+/* -------------------------------------------------------------------------*/
+/* change this: rm .moon so this becomes generic style for .destination-card*/
+/* -------------------------------------------------------------------------*/
+
+.destination-card.moon{
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-block: var(--spc-300);
+	text-align: center;
+	line-height: 1.6;
+	font-size: var(--fs-preset-9-mobile);
+	font-family: 'Barlow Regular';
+	font-weight: 200;
+	margin-bottom: 16px;
+
+	h2{
+		font-size: var(--fs-preset-2-mobile);
+		font-family: 'Bellefair Regular';
+		letter-spacing: var(--spc-50);
+		font-weight: 200;
+	}								
+
+	p{
+		text-transform: none;
+	}
+}
+
+.stats{
+	display:grid;
+	gap: var(--spc-300);
+	justify-items: center;
+	border-top: 1px solid var(--accent);
+	padding-top: 24px;
+	
+	h3{
+		font-size: var(--fs-preset-7-desktop);
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+
+	.stat{
+		display:grid;
+		justify-items:center;
+		gap: var(--spc-50);
+
+		span{
+			text-transform: uppercase;
+			font-size: var(--fs-preset-5-desktop);
+			letter-spacing: 2px;
+			font-family: 'Bellefair Regular';
+		}
+	}
+}
