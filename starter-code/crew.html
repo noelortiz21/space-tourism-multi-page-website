@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="home.css" media="all">
+	<link rel="stylesheet" href="crew.css" media="all">
 	<title></title>
 </head>
 <body>
+		<header>
+			<nav class="nav-wrapper">
+			  <img src="./assets/shared/logo.svg" alt="">
+			  <button><img src="./assets/shared/icon-hamburger.svg" alt=""></button>
+			  <ul class="nav-menu h">
+				  <li role="list"><a href="./index.html"><span>00</span> Home</a></li>
+				  <li role="list"><a><span>01</span> Destination</a></li>
+				  <li role="list"><a><span>02</span> Crew</a></li>
+				  <li role="list"><a><span>03</span> Technology</a></li>
+			  </ul>
+			</nav>
+		</header>
 	
-<div>
-	  <h1><span class="accent">02</span> Meet your crew</h1>
+<div class="crew-card-wrapper">
+	  <h1 class="crew-title"><span class="accent-color">02</span> Meet your crew</h1>
 
-	  <div>
-		  <h2 class="accent">Commander</h2>
-		  <h3>Douglas Hurley</h3>
+	  <div  class="crew-card">
+		  <h2 class="role accent-color">Commander</h2>
+		  <h3 class="name">Douglas Hurley</h3>
 
 		  <p>
 			  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
@@ -25,6 +40,7 @@
 		  <input type="checkbox">
 		  <input type="checkbox">
 	  </div>
+	  <div class="crew-img-wrapper"><img src="./assets/crew/image-douglas-hurley.png" alt=""></div>
   </div>
 </body>
 </html>
