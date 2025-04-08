@@ -111,12 +111,46 @@ body{
 .nav-card-wrapper{
 	display: grid;
 	grid-template-rows: 1fr 1fr;
+
 }
 
  .nav-wrapper{
 	 display: flex;
 	 justify-content:space-between;
 	 margin-bottom: 48px;
+	 font-family: "Barlow Condensed";
+	 font-size: var(--fs-preset-8-desktop);
+	 letter-spacing: 2px;
+
+	span{
+		font-weight: 700;
+	}
+	.nav-menu-drawer{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;		
+		width: 70%;
+		backdrop-filter: blur(40px);
+
+		button{
+			display: block;
+			margin: 32px 24px 32px auto;
+		}
+	}                         
+	
+ }
+ .list-wrapper{
+	 display: grid;
+	 gap: 32px;
+	 margin-top: 48px;
+
+	 .li-item{
+		 display: inline-block;
+		 color: white;
+		 text-decoration: none;
+	 }
+
  }
 
  .card-wrapper{
@@ -139,6 +173,7 @@ body{
 .card p{
 	font-size: var(--fs-preset-4-mobile);
 	font-weight: 300;
+	text-transform: none;
 }
 
 .card--title{
