@@ -188,6 +188,7 @@ body{
 		 & .card span{
 			 font-family: "Bellefair";
 			 font-size: var(--fs-preset-1-desktop);
+			 line-height: 1.1;
 		 }
 
 		 & div:last-child {
@@ -235,20 +236,22 @@ body{
 	background:none;
 	border:none;
 }
+
+.explore-btn-wrapper{
+	grid-row: 2/3;
+	justify-self: center;
+	align-self: center;
+
+}
 .card-wrapper button{
-	font-size: var(--fs-preset-4-mobile);
+	font-size: clamp(var(--fs-preset-4-mobile), 2vw ,var(--fs-preset-4-desktop));
 	text-transform: uppercase;
-	width: 144px;
+	width: clamp(144px, 16vw,272px);
 	border-radius: 100vh;
-	height: 144px;
-	margin: auto;
+	height: clamp(144px, 16vw,272px);
 	border:none;
 	cursor:pointer;
-	grid-row: 2/3;
 	letter-spacing: .125rem;
 	display:inline-block;
-}
-
-.wrapper{
 
 }
